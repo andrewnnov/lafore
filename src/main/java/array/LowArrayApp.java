@@ -1,6 +1,11 @@
+package array;
+
 public class LowArrayApp {
+
     public static void main(String[] args) {
-        LowArray arr = new LowArray(100);
+        LowArray arr;
+        arr = new LowArray(100);
+
         int nElems = 0;
         int j;
 
@@ -16,14 +21,14 @@ public class LowArrayApp {
         arr.setElem(9, 33);
         nElems = 10;
 
-        for (j = 0; j < nElems; j++) {
+        for(j = 0; j < nElems; j++) {
             System.out.print(arr.getElem(j) + " ");
         }
         System.out.println("");
 
         int searchKey = 26;
         for (j = 0; j < nElems; j++) {
-            if (arr.getElem(j) == searchKey) {
+            if(arr.getElem(j) == searchKey) {
                 break;
             }
         }
@@ -33,12 +38,21 @@ public class LowArrayApp {
             System.out.println("Found " + searchKey);
         }
 
-        //----delete element
-        for (j = 0; j < nElems; j++) {
-            if (arr.getElem(j) == 55) {
+        //delete value 55
+        for (j =0 ; j < nElems; j++) {
+            if(arr.getElem(j) == 55) {
                 break;
             }
         }
+        for (int k = j; k < nElems - 1; k++) {
+            arr.setElem(k, arr.getElem(k + 1));
+        }
 
+        nElems--;
+
+        for(j = 0; j < nElems; j++) {
+            System.out.print(arr.getElem(j) + " ");
+        }
+        System.out.println("");
     }
 }
