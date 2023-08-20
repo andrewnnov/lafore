@@ -53,6 +53,13 @@ public class ArrayApp {
         }
         nElems--;
 
+        //--------------------------
+
+        for (j = 0; j < nElems; j++) {
+            System.out.print(arr[j] + " ");
+        }
+        System.out.println("");
+
 
     }
 }
