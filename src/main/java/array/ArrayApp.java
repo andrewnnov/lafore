@@ -1,11 +1,12 @@
 package array;
 
 public class ArrayApp {
+
     public static void main(String[] args) {
         long[] arr;
         arr = new long[100];
         int nElems = 0;
-        int j;
+        int j = 0;
         long searchKey;
 
         arr[0] = 77;
@@ -18,14 +19,14 @@ public class ArrayApp {
         arr[7] = 00;
         arr[8] = 66;
         arr[9] = 33;
-
         nElems = 10;
 
-        for(j = 0; j < nElems; j++) {
+        for (j = 0; j < nElems; j++) {
             System.out.print(arr[j] + " ");
         }
         System.out.println("");
 
+        //--------------------------
 
         searchKey = 66;
         for (j = 0; j < nElems; j++) {
@@ -39,21 +40,19 @@ public class ArrayApp {
             System.out.println("Found " + searchKey);
         }
 
+        //--------------------------
+
         searchKey = 55;
         for (j = 0; j < nElems; j++) {
-            if(arr[j] == searchKey) {
+            if (arr[j] == searchKey) {
                 break;
             }
         }
-
-        for (int k = j; k < nElems - 1; k++) {
+        for (int k = j; k < nElems -1; k++) {
             arr[k] = arr[k + 1];
         }
         nElems--;
 
-        for (j = 0; j < nElems; j++) {
-            System.out.print(arr[j] + " ");
-        }
-        System.out.println("");
+
     }
 }
